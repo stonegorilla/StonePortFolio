@@ -1,10 +1,32 @@
 import type { NextPage } from "next";
 import Typewriter from "typewriter-effect";
+import styled from "@emotion/styled";
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const Button = styled.div`
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+`;
+const Card = styled.div`
+  width: 366px;
+  height: 356px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 24px 16px;
+`;
 const Home: NextPage = () => {
   return (
-    <>
-      <header style={{ backgroundColor: "gray" }}>
+    <Wrapper>
+      <header style={{ backgroundColor: "gray", width: "100%" }}>
         <div>여기는 stonegorilla 포트폴리오</div>
         <div>헬로</div>
         <Typewriter
@@ -20,7 +42,20 @@ const Home: NextPage = () => {
           }}
         />
       </header>
-      <h1>만들어 놓은 것들</h1>
+      <nav
+        style={{
+          width: "80%",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <Button>Resume</Button>
+        <Button>React</Button>
+        <Button>Node.js</Button>
+        <Button>Algorithm</Button>
+      </nav>
+
       <section
         style={{
           display: "flex",
@@ -35,15 +70,19 @@ const Home: NextPage = () => {
             gridTemplateColumns: "382px 382px 382px",
           }}
         >
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+          <Card>1</Card>
+          <Card>2</Card>
+          <Card>3</Card>
+          <Card>4</Card>
+          <Card>5</Card>
+          <Card>6</Card>
         </div>
       </section>
-    </>
+      <footer>
+        Thank you for visiting my portfolio &#128526;
+        <br />© Developer Stonegorilla, Powered By Next.js.
+      </footer>
+    </Wrapper>
   );
 };
 
