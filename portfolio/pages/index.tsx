@@ -75,7 +75,7 @@ const Home: NextPage = () => {
           <Card>3</Card>
           <Card>4</Card>
           <Card>5</Card>
-          <Card>6</Card>
+          <Card>7</Card>
         </div>
       </section>
       <footer>
