@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const URL = "https://jsonplaceholder.typicode.com/todos/1";
+
+      // AJAX 통신을 하겠다.
+      const xhr = new XMLHttpRequest();
+
+      //xhr 보내기 위해서 open 메서드를 활용을 해야겠다.
+      xhr.open("GET", URL);
+      xhr.send(); // 요청 보내기
+      // xhr.onreadystatechange = function () {
+      //   if (xhr.readyState == xhr.DONE) {
+      //     if (xhr.status == 200) {
+      //       const todo = xhr.response;
+      //       console.log(todo);
+      //     }
+      //   }
+      // };
+      xhr.onload = function () {
+        if (xhr.status == 200) {
+          const todo = xhr.response;
+          console.log(todo);
+        }
+      };
+      const todo = xhr.response; // 싱글스레드ㅜ 이거 때문에 AJAX 요청을 보내놓고 응답을 기다리지 않았다. 그래서 그냥 넘어감
+      console.log(todo);
+    </script>
+  </body>
+</html>

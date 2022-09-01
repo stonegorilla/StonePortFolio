@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        box-sizing: border-box;
+        width: 100px;
+        height: 100px;
+      }
+      .box1 {
+        background-color: pink;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 5;
+      }
+      .box2 {
+        background-color: black;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        z-index: 4;
+      }
+      .box3 {
+        background-color: yellow;
+        position: absolute;
+        top: 150px;
+        left: 150px;
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box5"></div>
+    </div>
+  </body>
+</html>

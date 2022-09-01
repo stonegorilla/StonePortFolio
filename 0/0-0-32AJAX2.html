@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON 파일 이용</title>
+  </head>
+  <body>
+    <h1>JSON 파일을 읽어 멤버를 호출해보자</h1>
+    <textarea id="student" cols="30" rows="10"></textarea>
+    <input type="button" value="출석" onclick="requestMsg()" />
+    <script>
+      let xhr;
+      let studentArea = document.getElementById("student");
+      function requestMsg() {
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = callbackFunc;
+        xhr.open("GET", "./member.json");
+        xhr.send(null);
+      }
+
+      function callbackFunc() {
+        if (xhr.readyState == 4) {
+          if (xhr.status == 200) {
+            //JSON 파일을 읽어왔다. (얘는 어짜피 문자열)
+            let stList = JSON.parse(xhr.response);
+            studentArea.value += "총학생수 :" + stList.length + "명\n";
+            for (let i = 0; i < stList.length; i++) {
+              let st = stList[i];
+              studentArea.value += `id : ${st.id}\nname : ${st.name}\n`;
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

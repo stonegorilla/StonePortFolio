@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투두 리스트</title>
+    <style>
+      .done {
+        text-decoration: line-through;
+      }
+      li {
+      }
+    </style>
+  </head>
+  <body>
+    <h1>투투 리스트</h1>
+
+    할일
+    <input type="text" id="todo-value" placeholder="할일 입력" />
+    <button id="regist">입력</button>
+    <hr />
+    <h2 class="done">할일 목록</h2>
+    <ul id="todo-list"></ul>
+    <script>
+      const registBtn = document.querySelector("#regist");
+      const inputTag = document.querySelector("#todo-value");
+      const ulTag = document.querySelector("#todo-list");
+      // 등록버튼을 눌렀다면 이벤트를 걸자
+      function registTodo() {
+        const content = inputTag.value;
+
+        if (!content.trim()) {
+          alert("할일을 입력하세용");
+        } else {
+          console.log(content.trim().length);
+          // li 태그 생성후, 채우기
+          const liTag = document.createElement("li");
+          liTag.innerText = content;
+
+          // 일 했다안했다 수정
+          liTag.addEventListener("click", function (event) {
+            event.target.classList.toggle("done");
+            console.log(event);
+          });
+          // 삭제 이벤트 달기
+          const delBtn = document.createElement("button");
+          delBtn.innerText = "X";
+          liTag.appendChild(delBtn);
+
+          // 삭제 버튼에 이벤트
+          delBtn.addEventListener("click", function (event) {
+            // event.target.parentElement.remove();
+            liTag.remove();
+          });
+
+          ulTag.appendChild(liTag);
+          inputTag.value = "";
+          inputTag.focus();
+        }
+      }
+
+      registBtn.addEventListener("click", registTodo);
+      // inputTag.addEventListener("keyup", function (event) {
+      //   if (event.code === "Enter") {
+      //     registTodo();
+      //   }
+      // });
+    </script>
+  </body>
+</html>
