@@ -1,0 +1,15 @@
+package com.ssafy.user.model.dao;
+
+import java.sql.SQLException;
+
+import com.ssafy.user.model.dto.User;
+
+public interface UserDao {
+	
+	
+	// id 등록 
+	public void InsertUser(User user) throws SQLException;
+	
+	// id,비밀번호 확인
+	public User CheckUser(User user) throws SQLException;
+}

@@ -18,7 +18,7 @@ const showReview = () => {
                 
         videos = JSON.parse(xhr.response);
         videoTag.innerHTML = `
-        <iframe width="560" height="315" src="${videos[vNo]['url']}" 
+        <iframe width="560" height="315" src='${videos[vNo]['url']}' 
         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
         clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 

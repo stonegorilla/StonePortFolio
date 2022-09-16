@@ -1,0 +1,15 @@
+package com.ssafy.user.model.dao;
+
+import java.sql.SQLException;
+
+import com.ssafy.user.model.dto.User;
+
+public class UserDaoImpl implements UserDao{
+
+	@Override
+	public void InsertUser(User user) throws SQLException {
+		
+		
+	}
+
+}

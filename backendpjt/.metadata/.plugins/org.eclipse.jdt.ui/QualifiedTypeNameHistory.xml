@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.ssafy.user.model.dto.User"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="com.ssafy.util.DBUtil"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.ssafy.board.model.dao.BoardDaoImpl"/>
+<fullyQualifiedTypeName name="com.ssafy.board.model.dao.BoardDao"/>
+<fullyQualifiedTypeName name="com.ssafy.board.model.dto.Board"/>
+<fullyQualifiedTypeName name="com.ssafy.review.model.dao.ReviewDaoImpl"/>
+<fullyQualifiedTypeName name="com.ssafy.review.model.dao.ReviewDao"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.ssafy.review.model.dto.Review"/>
+<fullyQualifiedTypeName name="com.ssafy.user.model.dao.UserDao"/>
+<fullyQualifiedTypeName name="com.ssafy.user.model.dao.UserDaoImpl"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+</qualifiedTypeNameHistroy>
